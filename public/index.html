@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS/HTML Workshop with Drivy</title>
+    <link rel ="stylesheet" href="style.css">
+  </head>
+
+
+  <body>
+      <h1 class="title"> <p>Drivy</p>
+    
+
+  <div class="form">
+    <div class="tab-content">
+    <div id="car">
+      <div class="field-wrap">    <input class="model" type="text" placeholder="Car model"/> </div>
+      <div class="field-wrap">    <input class="price-by-day" type="number" placeholder="Price by day"/> </div>
+      <div class="field-wrap">    <input class="price-by-km" type="number" placeholder="Price by km"/>  </div>
+    </div>
+    <div id="rental">
+      <div class="field-wrap">    <input class="begin" type="date" placeholder="Rental begin date"/>  </div>
+      <div class="field-wrap">    <input class="end" type="date" placeholder="Rental end date"/>  </div>
+      <div class="field-wrap">    <input class="distance" type="number" placeholder="Distance in km"/>  </div>
+      <input class="option" type="checkbox" placeholder="Deductible option"/>
+    </div>
+    <button type="submit" class="button button-block"/>Compute</button>  <!--<button id="compute">Compute</button>-->
+    <div id="actors"></div>
+    <script id="template" type="x-tmpl-mustache">
+      {{#actors}}
+        <div class="actor">
+          <span>{{who}}</span>
+          <span>{{type}}</span>
+          <span>{{amount}}</span>
+        </div>
+      {{/actors}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="drivy.js"></script>
+    <script src="index.js"></script>
+
+
+  </div>
+    </div>
+  </body>
+</html>
